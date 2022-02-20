@@ -8,6 +8,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    margin: 1px;
   }
 
   #nok {
@@ -19,6 +20,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    margin: 1px;
   }
 
   #ok {
@@ -30,4 +32,5 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    margin: 1px;
   }

@@ -3,7 +3,7 @@ import './Salida.css';
 
 const SalidaCalcu = (props) => {
 
-    
+
     const [estados, setEstados] = useState({
         boton1: 'predet',
         boton2: 'predet'
@@ -30,17 +30,14 @@ const SalidaCalcu = (props) => {
 
     return (
         <>
-            <form onSubmit={submitHandler37}>
+            <form>
                 <div className='nuevoproducto__controls'>
                     <div className='nuevoproducto__actions'>
-                        <button id={estados.boton1} type='submit'>37</button>
-                    </div>
-                </div>
-            </form>
-            <form onSubmit={submitHandler43}>
-                <div className='nuevoproducto__controls'>
-                    <div className='nuevoproducto__actions'>
-                        <button id={estados.boton2} type='submit'>43</button>
+                        <br />
+                        <button onClick={submitHandler37} id={estados.boton1} type='submit'>37</button>
+                        <button onClick={submitHandler43} id={estados.boton2} type='submit'>43</button>
+                        <br />
+                        <br />
                     </div>
                 </div>
             </form>
