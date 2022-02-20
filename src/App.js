@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/UI/Header';
+import Footer from './components/UI/Footer';
+import Entrada from './components/calcu/Entrada';
+import Salida from './components/calcu/Salida';
+import { useState } from 'react';
 
 function App() {
+
+  const [numero, setNumero] = useState('')
+
+  const addNumero = (numero) => {
+    setNumero(numero);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Entrada setear={addNumero}/>
+      <Salida algo={numero}/>
+      <Footer />
     </div>
   );
 }
