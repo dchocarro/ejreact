@@ -11,7 +11,7 @@
 
   #nok {
     background-color: #ff0000; /* Green */
-    border: none;
+    border: black;
     color: rgb(255, 255, 255);
     padding: 15px 32px;
     text-align: center;
@@ -22,7 +22,7 @@
 
   #ok {
     background-color: #4CAF50; /* Green */
-    border: none;
+    border: black;
     color: rgb(255, 255, 255);
     padding: 15px 32px;
     text-align: center;
