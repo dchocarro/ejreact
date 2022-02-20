@@ -7,7 +7,9 @@ const EntradaCalcu = (props) => {
     const nombreHandler = (event) => {
         props.setear(event.target.value);
         setNumerico(event.target.value)
+        props.actualizar(event.target.value, props.multi)
     }
+    
 
     return (
             <div className='nuevoproducto__controls'>

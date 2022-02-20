@@ -7,17 +7,26 @@ import { useState } from 'react';
 
 function App() {
 
-  const [numero, setNumero] = useState('')
-
+  const [numero, setNumero] = useState('0')
+  const [multi, setMulti] = useState('0');
+  const [final, setFinal] = useState('0');
   const addNumero = (numero) => {
     setNumero(numero);
   };
 
+  const cambiarMulti = (multi) => {
+    setMulti(multi);
+  };
+
+  const actualizarHandler = (n, r) => {
+    setFinal(n * r);
+  }
+
   return (
     <div>
       <Header />
-      <Entrada setear={addNumero}/>
-      <Salida algo={numero}/>
+      <Entrada setear={addNumero} actualizar={actualizarHandler} multi={multi}/>
+      <Salida algo={final} cambiarMulti={cambiarMulti} multi={multi} numero={numero} actualizar={actualizarHandler}/>
       <Footer />
     </div>
   );

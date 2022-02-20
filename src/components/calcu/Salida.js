@@ -3,30 +3,30 @@ import './Salida.css';
 
 const SalidaCalcu = (props) => {
 
-
-    const [result, setResult] = useState('');
-
-    const submitHandler37 = (event) => {
-        event.preventDefault();
-        setResult(props.algo*37);
-        setEstados({
-            boton1: 'ok',
-            boton2: 'nok'
-        })
-    }
-    const submitHandler43 = (event) => {
-        event.preventDefault();
-        setResult(props.algo*43);
-        setEstados({
-            boton1: 'nok',
-            boton2: 'ok'
-        })
-    }
     
     const [estados, setEstados] = useState({
         boton1: 'predet',
         boton2: 'predet'
     });
+
+    const submitHandler37 = (event) => {
+        event.preventDefault();
+        setEstados({
+            boton1: 'ok',
+            boton2: 'nok'
+        })
+        props.cambiarMulti(37)
+        props.actualizar(props.numero, 37)
+    }
+    const submitHandler43 = (event) => {
+        event.preventDefault();
+        setEstados({
+            boton1: 'nok',
+            boton2: 'ok'
+        })
+        props.cambiarMulti(43)
+        props.actualizar(props.numero, 43)
+    }
 
     return (
         <>
@@ -44,12 +44,12 @@ const SalidaCalcu = (props) => {
                     </div>
                 </div>
             </form>
-                <div className='nuevoproducto__controls'>
-                    <div className='nuevoproducto__control'>
-                        <label>Salida: </label>
-                        <input type='number' value={result} />
-                    </div>
+            <div className='nuevoproducto__controls'>
+                <div className='nuevoproducto__control'>
+                    <label>Salida: </label>
+                    <p>{props.algo}</p>
                 </div>
+            </div>
         </>
     )
 }
